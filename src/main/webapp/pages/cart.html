@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/app.js"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e2e2e2",
+                    "surface-container": "#1f1f1f",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#c6e9e9",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "secondary-container": "#2e4e4e",
+                    "on-primary-fixed": "#241a00",
+                    "secondary": "#abcdcd",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#474741",
+                    "on-error": "#690005",
+                    "primary": "#f2ca50",
+                    "surface-container-highest": "#353535",
+                    "inverse-primary": "#735c00",
+                    "primary-container": "#d4af37",
+                    "on-secondary-container": "#9dbfbe",
+                    "on-background": "#e2e2e2",
+                    "on-tertiary-fixed": "#1c1c17",
+                    "on-secondary-fixed": "#002020",
+                    "on-primary-container": "#554300",
+                    "primary-fixed-dim": "#e9c349",
+                    "outline-variant": "#4d4635",
+                    "tertiary": "#d1cec7",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#131313",
+                    "on-secondary": "#143535",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary": "#31312b",
+                    "surface-container-low": "#1b1b1b",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-on-surface": "#303030",
+                    "surface-variant": "#353535",
+                    "on-tertiary-container": "#464540",
+                    "outline": "#99907c",
+                    "tertiary-container": "#b5b3ac",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#e5e2db",
+                    "on-surface-variant": "#d0c5af",
+                    "primary-fixed": "#ffe088",
+                    "on-primary": "#3c2f00",
+                    "secondary-fixed-dim": "#abcdcd",
+                    "on-secondary-fixed-variant": "#2c4c4c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-serif { font-family: 'Noto Serif', serif; }
+      .font-sans { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-sans selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#131313]/60 backdrop-blur-md z-50 shadow-[0_40px_40px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-serif text-[#f2ca50] tracking-widest cursor-pointer" onclick="window.location.href='index.html'">AabhushanAI</div>
+<div class="hidden md:flex space-x-8 font-['Noto_Serif'] tracking-[0.05rem] uppercase text-sm">
+<a data-i18n="shop" class="text-[#f2ca50] border-b border-[#d4af37]/30 pb-1 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Collections</a>
+<a data-i18n="bespoke" class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Bespoke</a>
+<a data-i18n="atelier" class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Atelier</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Heritage</a>
+</div>
+<div class="flex items-center space-x-6 text-[#f2ca50]">
+<button onclick="UI.toggleLanguage()" class="hover:scale-95 transition-transform duration-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">language</span>
+<span id="lang-btn-text" class="text-[10px] font-bold uppercase tracking-tighter">EN</span>
+</button>
+<a href="cart.html" class="hover:scale-95 transition-transform duration-400 block pt-1 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+<a href="login.html" id="nav-login-link" class="hover:scale-95 transition-transform duration-400 block pt-1">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button id="nav-logout-btn" onclick="API.logout().then(()=>location.reload())" class="hidden hover:text-red-400 transition-colors">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen">
+<header class="mb-16">
+<h1 class="text-5xl md:text-7xl font-serif text-on-surface tracking-tight mb-4">Your Selection</h1>
+<p class="text-on-surface-variant font-light tracking-[0.1em] uppercase text-sm">Review your curated treasures before checkout</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Items Section -->
+<section id="cartContainer" class="lg:col-span-8 space-y-12">
+    <!-- Cart items will be loaded here -->
+</section>
+<!-- Summary Section -->
+<aside class="lg:col-span-4 sticky top-32">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/5 shadow-2xl">
+<h2 class="text-xl font-serif text-[#f2ca50] mb-8 tracking-wider uppercase">Order Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-on-surface-variant text-sm uppercase tracking-widest">
+<span>Subtotal</span>
+<span id="subtotal">₹0</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-sm uppercase tracking-widest">
+<span>Bespoke Insurance</span>
+<span id="insurance">₹2,400</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-sm uppercase tracking-widest">
+<span>GST (3%)</span>
+<span id="gst">₹0</span>
+</div>
+<div class="h-px bg-outline-variant/20 my-6"></div>
+<div class="flex justify-between items-end">
+<span class="text-on-surface font-serif text-lg tracking-widest uppercase">Grand Total</span>
+<span id="grandTotal" class="text-3xl font-serif text-primary">₹0</span>
+</div>
+</div>
+<div class="space-y-4">
+<button onclick="checkout()" class="w-full py-5 bg-gradient-to-br from-[#f2ca50] to-[#d4af37] text-on-primary-fixed font-bold uppercase tracking-[0.2em] text-xs rounded-md shadow-lg shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95 duration-400">
+                            Proceed to Checkout
+                        </button>
+<div class="flex items-center justify-center gap-3 py-4 text-on-tertiary-fixed-variant/60 text-[10px] uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">lock</span>
+                            Secure encrypted checkout
+                        </div>
+</div>
+<div class="mt-8 p-4 bg-surface-container-high/50 rounded-lg border border-primary/10">
+<p class="text-[10px] text-on-surface-variant leading-relaxed">
+<span class="text-primary font-bold">THE ATELIER PROMISE:</span> Each piece is inspected by our master craftsmen before dispatch. Complimentary insured worldwide shipping included.
+                        </p>
+</div>
+</div>
+<a class="block text-center mt-8 text-on-surface-variant hover:text-primary text-xs uppercase tracking-widest transition-colors font-medium" href="shop.html">
+                    Continue Exploring Collections
+                </a>
+</aside>
+</div>
+<!-- Main Content Wrapper -->
+<div id="mainContent" class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    <!-- Items and Summary already here -->
+</div>
+
+<!-- Empty Cart State -->
+<div id="emptyState" class="hidden flex-col items-center justify-center py-24 text-center">
+    <div class="w-24 h-24 mb-8 flex items-center justify-center bg-surface-container rounded-full text-primary-container">
+        <span class="material-symbols-outlined text-5xl">inventory_2</span>
+    </div>
+    <h2 class="text-3xl font-serif mb-4">Your vault is empty</h2>
+    <p class="text-on-surface-variant max-w-xs mb-12">Return to the gallery to find your next heirloom piece.</p>
+    <a href="shop.html" class="px-12 py-4 border border-primary text-primary uppercase tracking-widest text-xs font-bold hover:bg-primary hover:text-on-primary transition-all duration-500">
+        Go to Atelier
+    </a>
+</div>
+
+<script>
+    const cartContainer = document.getElementById('cartContainer');
+    const mainContent = document.getElementById('mainContent');
+    const emptyState = document.getElementById('emptyState');
+    const subtotalEl = document.getElementById('subtotal');
+    const gstEl = document.getElementById('gst');
+    const grandTotalEl = document.getElementById('grandTotal');
+
+    function loadCart() {
+        API.getCart().then(items => {
+            if (items.error) {
+                UI.showToast(items.error, 'error');
+                setTimeout(() => window.location.href = 'login.html', 1500);
+                return;
+            }
+
+            if (items.length === 0) {
+                mainContent.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                return;
+            }
+
+            mainContent.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            renderCartItems(items);
+            calculateTotals(items);
+        });
+    }
+
+    function renderCartItems(items) {
+        cartContainer.innerHTML = '';
+        items.forEach(item => {
+            const p = item.product;
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'group relative flex flex-col md:flex-row gap-8 pb-12 border-b border-outline-variant/15';
+            itemDiv.innerHTML = `
+                <div class="w-full md:w-48 h-64 bg-surface-container-low overflow-hidden rounded-lg">
+                    <img src="${p.image_url}" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100">
+                </div>
+                <div class="flex-1 flex flex-col justify-between py-2">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-2xl font-serif text-on-surface mb-2">${p.name}</h3>
+                            <p class="text-on-surface-variant text-sm font-light">${p.category} • ${p.mood}</p>
+                        </div>
+                        <button onclick="removeFromCart(${item.id})" class="text-on-surface-variant hover:text-error transition-colors">
+                            <span class="material-symbols-outlined text-xl">close</span>
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-end mt-8">
+                        <div class="flex items-center bg-surface-container-high rounded-full p-1 border border-outline-variant/10">
+                            <button onclick="updateQty(${item.id}, ${item.quantity - 1})" class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">remove</span>
+                            </button>
+                            <span class="px-4 font-label font-semibold text-sm">${String(item.quantity).padStart(2, '0')}</span>
+                            <button onclick="updateQty(${item.id}, ${item.quantity + 1})" class="w-8 h-8 flex items-center justify-center hover:text-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                        <span class="text-2xl font-serif text-primary">₹${(p.price * item.quantity).toLocaleString()}</span>
+                    </div>
+                </div>
+            `;
+            cartContainer.appendChild(itemDiv);
+        });
+    }
+
+    function calculateTotals(items) {
+        let subtotal = 0;
+        items.forEach(item => subtotal += (item.product.price * item.quantity));
+        const insurance = 2400;
+        const gst = subtotal * 0.03;
+        const total = subtotal + insurance + gst;
+
+        subtotalEl.innerText = `₹${subtotal.toLocaleString()}`;
+        gstEl.innerText = `₹${gst.toLocaleString()}`;
+        grandTotalEl.innerText = `₹${total.toLocaleString()}`;
+    }
+
+    function updateQty(id, qty) {
+        if (qty < 1) return;
+        API.updateCart(id, qty).then(res => {
+            if (res.success) loadCart();
+        });
+    }
+
+    function removeFromCart(id) {
+        API.removeFromCart(id).then(res => {
+            if (res.success) {
+                UI.showToast('Item removed');
+                loadCart();
+            }
+        });
+    }
+
+    function checkout() {
+        window.location.href = 'checkout.html';
+    }
+
+    // Initial load
+    loadCart();
+</script>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-[#131313] border-t border-[#d4af37]/10">
+<div class="w-full px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="md:col-span-1">
+<div class="text-xl font-serif text-[#f2ca50] mb-6">AabhushanAI</div>
+<p class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase leading-relaxed">
+                    Elevating the artisan's craft through digital intelligence.
+                </p>
+</div>
+<div class="md:col-span-1 flex flex-col gap-4">
+<h4 class="text-[#f2ca50] font-['Manrope'] text-xs tracking-widest uppercase font-bold mb-2">The House</h4>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">The Craftsmanship</a>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Atelier Story</a>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Heritage Gems</a>
+</div>
+<div class="md:col-span-1 flex flex-col gap-4">
+<h4 class="text-[#f2ca50] font-['Manrope'] text-xs tracking-widest uppercase font-bold mb-2">Service</h4>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Privacy Policy</a>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Terms of Service</a>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="md:col-span-1 flex flex-col gap-4">
+<h4 class="text-[#f2ca50] font-['Manrope'] text-xs tracking-widest uppercase font-bold mb-2">Connect</h4>
+<a class="text-[#F9F6EE]/40 font-['Manrope'] text-xs tracking-widest uppercase hover:text-[#F9F6EE] transition-colors duration-400" href="#">Contact Us</a>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-[#F9F6EE]/40 cursor-pointer hover:text-[#f2ca50]">public</span>
+<span class="material-symbols-outlined text-[#F9F6EE]/40 cursor-pointer hover:text-[#f2ca50]">mail</span>
+</div>
+</div>
+</div>
+<div class="w-full px-12 py-8 border-t border-[#d4af37]/5 text-center">
+<p class="text-[#F9F6EE]/40 font-['Manrope'] text-[10px] tracking-widest uppercase">
+                © 2024 AabhushanAI. The Digital Atelier.
+            </p>
+</div>
+</footer>
+</body></html>

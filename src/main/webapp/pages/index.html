@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AabhushanAI | The Digital Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="../js/app.js"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e2e2e2",
+                        "surface-container": "#1f1f1f",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#c6e9e9",
+                        "tertiary-fixed-dim": "#c9c6bf",
+                        "secondary-container": "#2e4e4e",
+                        "on-primary-fixed": "#241a00",
+                        "secondary": "#abcdcd",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#474741",
+                        "on-error": "#690005",
+                        "primary": "#f2ca50",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "on-secondary-container": "#9dbfbe",
+                        "on-background": "#e2e2e2",
+                        "on-tertiary-fixed": "#1c1c17",
+                        "on-secondary-fixed": "#002020",
+                        "on-primary-container": "#554300",
+                        "primary-fixed-dim": "#e9c349",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#d1cec7",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "on-secondary": "#143535",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#31312b",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-on-surface": "#303030",
+                        "surface-variant": "#353535",
+                        "on-tertiary-container": "#464540",
+                        "outline": "#99907c",
+                        "tertiary-container": "#b5b3ac",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-surface-variant": "#d0c5af",
+                        "primary-fixed": "#ffe088",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed-dim": "#abcdcd",
+                        "on-secondary-fixed-variant": "#2c4c4c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #131313; color: #F9F6EE; font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(19, 19, 19, 0.6); backdrop-filter: blur(20px); }
+        .gold-gradient { background: linear-gradient(135deg, #f2ca50 0%, #d4af37 100%); }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#131313]/60 backdrop-blur-md z-50 shadow-[0_40px_40px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-serif text-[#f2ca50] tracking-widest cursor-pointer" onclick="window.location.href='index.html'">AabhushanAI</div>
+<div class="hidden md:flex space-x-8 font-['Noto_Serif'] tracking-[0.05rem] uppercase text-sm">
+<a data-i18n="shop" class="text-[#f2ca50] border-b border-[#d4af37]/30 pb-1 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Collections</a>
+<a data-i18n="bespoke" class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Bespoke</a>
+<a data-i18n="atelier" class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Atelier</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="shop.html">Heritage</a>
+</div>
+<div class="flex items-center space-x-6 text-[#f2ca50]">
+<button onclick="UI.toggleLanguage()" class="hover:scale-95 transition-transform duration-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-lg">language</span>
+<span id="lang-btn-text" class="text-[10px] font-bold uppercase tracking-tighter">EN</span>
+</button>
+<a href="cart.html" class="hover:scale-95 transition-transform duration-400 block pt-1 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+</a>
+<a id="navLogin" href="login.html" class="hover:scale-95 transition-transform duration-400 block pt-1">
+<span class="material-symbols-outlined">person</span>
+</a>
+<button id="navLogout" onclick="API.logout().then(()=>location.reload())" class="hidden hover:scale-95 transition-transform duration-400 block pt-1">
+<span class="material-symbols-outlined">logout</span>
+</button>
+</div>
+</nav>
+
+<style>
+  .logged-in #navLogin { display: none; }
+  .logged-in #navLogout { display: block; }
+</style>
+<!-- Hero Section -->
+<header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-50" src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=2000"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-surface/40 to-surface"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl">
+<h1 class="font-serif text-5xl md:text-8xl text-on-surface mb-6 tracking-tighter">Artistry in <span class="text-primary italic">Intelligence</span></h1>
+<p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 tracking-wide font-light leading-relaxed">
+                Experience the convergence of heritage craftsmanship and generative design. Every piece is a unique dialogue between tradition and the future.
+            </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<a href="shop.html" class="gold-gradient px-10 py-4 rounded-lg font-bold text-on-primary-fixed uppercase tracking-widest text-sm hover:brightness-110 transition-all duration-500 shadow-xl shadow-primary/10 inline-block">
+                    Shop Now
+                </a>
+<button class="border border-outline-variant/30 px-10 py-4 rounded-lg font-bold text-on-surface uppercase tracking-widest text-sm hover:bg-surface-container-highest transition-all duration-500 backdrop-blur-sm">
+                    The Atelier
+                </button>
+</div>
+</div>
+</header>
+<!-- Featured Collections - Bento Grid -->
+<section class="py-32 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-4 block">Curated Selection</span>
+<h2 class="font-serif text-4xl md:text-6xl text-on-surface leading-tight">Featured Collections</h2>
+</div>
+<div class="text-on-surface-variant font-light md:max-w-sm">
+                Explore our signature lines, from the architectural precision of modern rings to the flowing grace of heritage necklaces.
+            </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-[1200px] md:h-[800px]">
+<!-- Necklaces -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=1000"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h3 class="font-serif text-3xl text-on-surface mb-2">Necklaces</h3>
+<p class="text-on-surface-variant font-light mb-6">Celestial alignments and fluid forms.</p>
+<a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Earrings -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=1000"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h3 class="font-serif text-3xl text-on-surface mb-2">Earrings</h3>
+<a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Rings -->
+<div class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=1000"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-10 left-10">
+<h3 class="font-serif text-3xl text-on-surface mb-2">Rings</h3>
+<a class="text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-2" href="#">Explore <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Bespoke -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/10">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=1000"/>
+<div class="absolute inset-0 flex flex-col justify-center items-center text-center px-10">
+<h3 class="font-serif text-4xl text-primary mb-4 italic">The Bespoke Experience</h3>
+<p class="text-on-surface max-w-lg mb-8">Design your soul-piece using our AI-assisted Atelier interface. From sketch to reality.</p>
+<button class="border border-primary text-primary px-8 py-3 rounded-lg uppercase tracking-widest text-xs font-bold hover:bg-primary hover:text-surface transition-colors duration-500">Start Creation</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Craftsmanship -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img class="rounded-xl relative z-10 shadow-2xl" data-alt="Macro shot of a jeweler polishing a gold ring with fine precision, sparks and metal texture in high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsitq9DV17yIZPMvXuwlZ1nK2UvmuK9wfG8s9NKOflyNiRQr2_lVPm2D82h3UJ5IKSRyuXlsbr3kbw13gfstOG7s5tYIr6nakkG87JiOOBlA1AOH0iTgvRcXVlOAsThXfH01OaVJfja38eVMIbAklRIQR0764yi8KNlnEadAAjZMJtPA3qKxOUbq9Gjvx5B9qP7Y9rM6iAq2UQVRm8odoi2q4Mt7tCxh_sbjN8VZCWKuyWk2eIcCyZlhpMBifAhIB71Sb-2KxU6Sll"/>
+<div class="absolute -bottom-12 -right-12 bg-surface p-8 rounded-xl border border-outline-variant/10 z-20 hidden md:block">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+<div>
+<p class="text-on-surface font-bold">Certified Hallmarks</p>
+<p class="text-on-surface-variant text-xs">BIS 916 &amp; IGI Certified</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<span class="text-primary uppercase tracking-[0.3em] text-xs font-bold mb-6 block">Our Heritage</span>
+<h2 class="font-serif text-4xl md:text-5xl text-on-surface mb-8 leading-tight">The Digital <br/><span class="italic text-primary-container">Atelier</span></h2>
+<div class="space-y-6 text-on-surface-variant font-light leading-relaxed text-lg">
+<p>At AabhushanAI, we believe that luxury is not just about the final ornament, but the journey of its creation. We bridge the gap between ancient Indian metalwork techniques and futuristic AI algorithms.</p>
+<p>Our AI analyzes thousands of years of architectural motifs, from the temples of Khajuraho to the Taj Mahal, to generate unique patterns that our master craftsmen then bring to life in 22k gold and ethically sourced diamonds.</p>
+</div>
+<div class="mt-12 flex gap-12">
+<div>
+<p class="font-serif text-4xl text-primary mb-1">40+</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant">Master Artisans</p>
+</div>
+<div>
+<p class="font-serif text-4xl text-primary mb-1">100%</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant">Ethical Sourcing</p>
+</div>
+<div>
+<p class="font-serif text-4xl text-primary mb-1">01</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant">Unique Masterpiece</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Slider (Static Representation) -->
+<section class="py-32 px-8 max-w-7xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-8" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<div class="max-w-4xl mx-auto">
+<h2 class="font-serif text-3xl md:text-5xl text-on-surface mb-12 italic leading-snug">
+                "AabhushanAI is more than a jeweler; they are curators of personal history. My custom wedding necklace feels like a piece of my soul cast in gold."
+            </h2>
+<div class="flex flex-col items-center">
+<img class="w-20 h-20 rounded-full object-cover mb-4 border-2 border-primary/20 p-1" data-alt="Portrait of a sophisticated woman smiling, professional photography with soft lighting and neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjCv9_DBq7igIisk_qQnh1l6iEVvrquQcp0V-ACJ21g0_krallXYyXkCke9RfzMgG4LQHid2BxJ3jw6a7K2aFi5orBQ9ZghzNGgvApeIV9QiC33pHQGUcIqJb8lf9hV5JgcruCZwn_MPSgttlGu5t_H3McA5r-bSH-o8UwV8Gocu2cw0Yp4G1breLVevKmOzkY9U1shEFYfu1TfU8D7fNEwSQlmd7XGHMYwkkL9tlTMCi8oZAj_tY2ioH24DtUE8B6ythm_KpESA9M"/>
+<p class="font-bold text-on-surface tracking-widest uppercase text-xs">Priya Mehra</p>
+<p class="text-on-surface-variant text-xs mt-1">Founding Director, Mehra Arts</p>
+</div>
+</div>
+<!-- Slider Controls -->
+<div class="flex justify-center gap-4 mt-16">
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/20 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Newsletter CTA -->
+<section class="py-24 px-8">
+<div class="max-w-5xl mx-auto bg-surface-container rounded-3xl p-12 md:p-20 text-center border border-outline-variant/10 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px]"></div>
+<div class="relative z-10">
+<h2 class="font-serif text-4xl text-on-surface mb-6">Enter the Inner Circle</h2>
+<p class="text-on-surface-variant mb-10 max-w-md mx-auto">Receive early access to limited collections and private atelier events.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-xl mx-auto">
+<input class="flex-grow bg-surface-container-low border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-4 px-2 placeholder:text-on-surface-variant/40 transition-all font-body text-sm outline-none" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="gold-gradient px-8 py-4 rounded font-bold text-on-primary-fixed uppercase tracking-widest text-xs hover:brightness-110 transition-all">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 bg-[#131313] border-t border-[#d4af37]/10 font-['Manrope'] text-xs tracking-widest uppercase">
+<div class="space-y-6">
+<div class="text-xl font-serif text-[#f2ca50]">AabhushanAI</div>
+<p class="normal-case tracking-normal text-on-surface-variant/60 leading-relaxed max-w-xs">
+                Redefining the luxury experience through the lens of artificial intelligence and timeless Indian craftsmanship.
+            </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-[#f2ca50] cursor-pointer hover:text-[#F9F6EE] transition-colors">public</span>
+<span class="material-symbols-outlined text-[#f2ca50] cursor-pointer hover:text-[#F9F6EE] transition-colors">camera</span>
+<span class="material-symbols-outlined text-[#f2ca50] cursor-pointer hover:text-[#F9F6EE] transition-colors">mail</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#f2ca50] mb-2">The Digital Atelier</h4>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">The Craftsmanship</a>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Privacy Policy</a>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-[#f2ca50] mb-2">Client Services</h4>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Shipping &amp; Returns</a>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Contact Us</a>
+<a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Book an Appointment</a>
+</div>
+<div class="space-y-6">
+<h4 class="text-[#f2ca50]">The Vault</h4>
+<p class="normal-case tracking-normal text-on-surface-variant/40 leading-relaxed">
+                Mumbai Atelier: <br/> 402, Signature Towers, BKC, Mumbai 400051
+            </p>
+<p class="text-[#f2ca50] mt-auto">© 2024 AabhushanAI. The Digital Atelier.</p>
+</div>
+</footer>
+<!-- Floating Action Button for Mobile / Locker View -->
+<button onclick="window.location.href='locker.html'" class="fixed bottom-8 right-8 w-16 h-16 rounded-full glass-nav flex items-center justify-center border border-primary/20 shadow-2xl z-40 group hover:scale-110 transition-all duration-500">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="absolute right-full mr-4 bg-surface-container-high px-4 py-2 rounded-lg text-[10px] text-primary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant/10">MY PRIVATE COLLECTION</span>
+</button>
+</body></html>

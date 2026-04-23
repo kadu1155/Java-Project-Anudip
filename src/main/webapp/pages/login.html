@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="../js/app.js"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ease-bezier {
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .text-shadow-gold {
+            text-shadow: 0 0 20px rgba(242, 202, 80, 0.3);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#e2e2e2",
+                      "surface-container": "#1f1f1f",
+                      "error-container": "#93000a",
+                      "secondary-fixed": "#c6e9e9",
+                      "tertiary-fixed-dim": "#c9c6bf",
+                      "secondary-container": "#2e4e4e",
+                      "on-primary-fixed": "#241a00",
+                      "secondary": "#abcdcd",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-dim": "#131313",
+                      "background": "#131313",
+                      "on-tertiary-fixed-variant": "#474741",
+                      "on-error": "#690005",
+                      "primary": "#f2ca50",
+                      "surface-container-highest": "#353535",
+                      "inverse-primary": "#735c00",
+                      "primary-container": "#d4af37",
+                      "on-secondary-container": "#9dbfbe",
+                      "on-background": "#e2e2e2",
+                      "on-tertiary-fixed": "#1c1c17",
+                      "on-secondary-fixed": "#002020",
+                      "on-primary-container": "#554300",
+                      "primary-fixed-dim": "#e9c349",
+                      "outline-variant": "#4d4635",
+                      "tertiary": "#d1cec7",
+                      "surface-bright": "#393939",
+                      "inverse-surface": "#e2e2e2",
+                      "on-error-container": "#ffdad6",
+                      "surface": "#131313",
+                      "on-secondary": "#143535",
+                      "surface-container-high": "#2a2a2a",
+                      "on-tertiary": "#31312b",
+                      "surface-container-low": "#1b1b1b",
+                      "on-primary-fixed-variant": "#574500",
+                      "inverse-on-surface": "#303030",
+                      "surface-variant": "#353535",
+                      "on-tertiary-container": "#464540",
+                      "outline": "#99907c",
+                      "tertiary-container": "#b5b3ac",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#e9c349",
+                      "tertiary-fixed": "#e5e2db",
+                      "on-surface-variant": "#d0c5af",
+                      "primary-fixed": "#ffe088",
+                      "on-primary": "#3c2f00",
+                      "secondary-fixed-dim": "#abcdcd",
+                      "on-secondary-fixed-variant": "#2c4c4c"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": ["Noto Serif"],
+                      "body": ["Manrope"],
+                      "label": ["Manrope"]
+              }
+            },
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar: Suppressed per shell logic for transactional pages (Login) -->
+<!-- We render a simplified Brand Anchor for the Login screen -->
+<nav class="fixed top-0 w-full z-50 flex justify-center py-8">
+<span class="text-2xl font-headline text-primary tracking-widest uppercase">AabhushanAI</span>
+</nav>
+<main class="min-h-screen w-full flex flex-col md:flex-row">
+<!-- Split Screen: Left Side (Atmospheric Image) -->
+<section class="hidden md:flex md:w-1/2 relative overflow-hidden bg-surface-container-lowest">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-luminosity" data-alt="Macro photography of a gold and diamond necklace resting on dark velvet with dramatic cinematic lighting and golden bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNBLDaJPDRCCrhw_UE3Y7XSuuv00r1e2aV27FfeUEiALXvCmq7iEUkUDPBH_qk0YM7bgmLRnfw7KLwfLvV-z0lUQwKyVNmEu-5Ddf2yegRI4YE5w3C_XWYSPUqm5U83qo0ZJ5VFqh906Omqr5BG_zxULqM1HNAltr0rNh-yol-pMzEvowt_U3kTdaSbsyElA9slCpfK_Q0okplAaeB--tI45_xz2O0cE2XQ9f0lK00uUUhqgr9a_DLyrHO2EAxRtoZT87wWNF3_4O-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative z-10 flex flex-col justify-end p-20 max-w-2xl">
+<h2 class="text-5xl font-headline text-primary mb-6 leading-tight">Crafting Digital <br/>Legacies.</h2>
+<p class="text-on-surface-variant text-lg font-light tracking-wide leading-relaxed">
+                    Step into the Digital Atelier where heritage meets artificial intelligence. Curate your collection in the most exclusive vault of the modern era.
+                </p>
+<div class="mt-12 w-24 h-[1px] bg-primary-container/40"></div>
+</div>
+</section>
+<!-- Split Screen: Right Side (Forms) -->
+<section class="flex-1 flex items-center justify-center p-8 md:p-16 lg:p-24 bg-surface-dim">
+<div class="w-full max-w-md">
+<!-- Toggle Header -->
+<div class="flex gap-8 mb-12 border-b border-outline-variant/20">
+<button id="loginToggle" class="pb-4 text-sm font-label tracking-[0.15rem] uppercase text-primary border-b-2 border-primary transition-all duration-300">Login</button>
+<button id="signupToggle" class="pb-4 text-sm font-label tracking-[0.15rem] uppercase text-on-surface/40 hover:text-on-surface transition-all duration-300">Signup</button>
+</div>
+<header class="mb-10">
+<h1 class="text-3xl font-headline text-on-surface mb-2">Welcome Back</h1>
+<p class="text-on-surface-variant font-light">Access your private atelier and bespoke collections.</p>
+</header>
+<!-- Social Logins -->
+<div class="grid grid-cols-2 gap-4 mb-10">
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container border border-outline-variant/10 rounded-lg hover:bg-surface-container-high transition-all duration-400 group">
+<svg class="w-5 h-5 fill-primary" viewbox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.90 3.33-2.03 4.44-1.33 1.33-3.38 2.78-6.94 2.78-5.48 0-9.74-4.43-9.74-9.92s4.26-9.92 9.74-9.92c3.08 0 5.34 1.2 7.03 2.82l2.33-2.33C18.59 1.7 15.86 0 12.48 0 5.86 0 .3 5.39.3 12s5.56 12 12.18 12c3.57 0 6.26-1.17 8.35-3.35 2.15-2.15 2.83-5.18 2.83-7.73 0-.74-.06-1.42-.18-2H12.48z"></path></svg>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface/80 group-hover:text-primary">Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 bg-surface-container border border-outline-variant/10 rounded-lg hover:bg-surface-container-high transition-all duration-400 group">
+<svg class="w-5 h-5 fill-primary" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+<span class="text-xs font-label uppercase tracking-widest text-on-surface/80 group-hover:text-primary">Facebook</span>
+</button>
+</div>
+<div class="relative flex items-center mb-10">
+<div class="flex-grow border-t border-outline-variant/10"></div>
+<span class="flex-shrink mx-4 text-[10px] font-label uppercase tracking-[0.2em] text-on-surface/30">Or use email</span>
+<div class="flex-grow border-t border-outline-variant/10"></div>
+</div>
+<!-- Main Form -->
+<form id="authForm" class="space-y-8">
+<div id="nameField" class="relative group hidden">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface/50 mb-2 group-focus-within:text-primary transition-colors">Full Name</label>
+<input id="userName" class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface placeholder:text-on-surface/20 focus:ring-0 focus:border-primary transition-all duration-500 font-light" placeholder="Your Name" type="text"/>
+<div class="absolute bottom-0 left-1/2 w-0 h-[1px] bg-primary group-focus-within:w-full group-focus-within:left-0 transition-all duration-500"></div>
+</div>
+<div class="relative group">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface/50 mb-2 group-focus-within:text-primary transition-colors">Email Address</label>
+<input id="userEmail" class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface placeholder:text-on-surface/20 focus:ring-0 focus:border-primary transition-all duration-500 font-light" placeholder="atelier@aabhushan.ai" type="email" required/>
+<div class="absolute bottom-0 left-1/2 w-0 h-[1px] bg-primary group-focus-within:w-full group-focus-within:left-0 transition-all duration-500"></div>
+</div>
+<div class="relative group">
+<div class="flex justify-between items-end mb-2">
+<label class="block text-[10px] font-label uppercase tracking-widest text-on-surface/50 group-focus-within:text-primary transition-colors">Security Key</label>
+<a class="text-[10px] font-label uppercase tracking-widest text-primary/60 hover:text-primary transition-colors" href="#">Forgot?</a>
+</div>
+<input id="userPassword" class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface placeholder:text-on-surface/20 focus:ring-0 focus:border-primary transition-all duration-500 font-light" placeholder="••••••••" type="password" required/>
+<div class="absolute bottom-0 left-1/2 w-0 h-[1px] bg-primary group-focus-within:w-full group-focus-within:left-0 transition-all duration-500"></div>
+</div>
+<div class="pt-4">
+<button id="authSubmit" class="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary font-label uppercase tracking-[0.2em] text-sm rounded-lg shadow-lg shadow-primary/10 hover:shadow-primary/20 hover:scale-[1.01] transition-all duration-500 ease-bezier" type="submit">
+                            Enter the Atelier
+                        </button>
+</div>
+</form>
+
+<script>
+    let isLogin = true;
+    const form = document.getElementById('authForm');
+    const nameField = document.getElementById('nameField');
+    const loginToggle = document.getElementById('loginToggle');
+    const signupToggle = document.getElementById('signupToggle');
+    const authSubmit = document.getElementById('authSubmit');
+    const title = document.querySelector('h1');
+
+    loginToggle.addEventListener('click', () => {
+        isLogin = true;
+        nameField.classList.add('hidden');
+        loginToggle.classList.add('text-primary', 'border-primary');
+        loginToggle.classList.remove('text-on-surface/40');
+        signupToggle.classList.remove('text-primary', 'border-primary');
+        signupToggle.classList.add('text-on-surface/40');
+        authSubmit.innerText = 'Enter the Atelier';
+        title.innerText = 'Welcome Back';
+    });
+
+    signupToggle.addEventListener('click', () => {
+        isLogin = false;
+        nameField.classList.remove('hidden');
+        signupToggle.classList.add('text-primary', 'border-primary');
+        signupToggle.classList.remove('text-on-surface/40');
+        loginToggle.classList.remove('text-primary', 'border-primary');
+        loginToggle.classList.add('text-on-surface/40');
+        authSubmit.innerText = 'Create Account';
+        title.innerText = 'Join the Atelier';
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('userEmail').value;
+        const pass = document.getElementById('userPassword').value;
+        const name = document.getElementById('userName').value;
+
+        if (isLogin) {
+            API.login(email, pass).then(res => {
+                if (res.success) {
+                    UI.showToast('Authentication successful');
+                    setTimeout(() => window.location.href = 'index.html', 1000);
+                } else {
+                    UI.showToast(res.message, 'error');
+                }
+            });
+        } else {
+            API.signup({ name, email, password: pass, role: 'USER' }).then(res => {
+                if (res.success) {
+                    UI.showToast(res.message);
+                    loginToggle.click(); // Switch to login
+                } else {
+                    UI.showToast(res.message, 'error');
+                }
+            });
+        }
+    });
+</script>
+<p class="mt-12 text-center text-xs font-light text-on-surface/40 tracking-wider">
+                    By entering, you agree to our <a class="text-on-surface/60 border-b border-outline-variant/40 hover:text-primary hover:border-primary transition-all" href="#">Privacy Policy</a> and <a class="text-on-surface/60 border-b border-outline-variant/40 hover:text-primary hover:border-primary transition-all" href="#">Terms of Service</a>.
+                </p>
+</div>
+</section>
+</main>
+<!-- Footer: Shared Component mapping -->
+<footer class="w-full px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 bg-[#131313] border-t border-[#d4af37]/10">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-headline text-[#f2ca50] block mb-6">AabhushanAI</span>
+<p class="font-label text-xs tracking-widest uppercase text-[#F9F6EE]/40 leading-relaxed">
+                The Digital Atelier.<br/>Redefining luxury through technology.
+            </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label text-xs tracking-widest uppercase text-[#d4af37] mb-8">The Craftsmanship</h4>
+<ul class="space-y-4">
+<li><a class="font-label text-xs tracking-widest uppercase text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Atelier</a></li>
+<li><a class="font-label text-xs tracking-widest uppercase text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Heritage</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label text-xs tracking-widest uppercase text-[#d4af37] mb-8">Service</h4>
+<ul class="space-y-4">
+<li><a class="font-label text-xs tracking-widest uppercase text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Privacy Policy</a></li>
+<li><a class="font-label text-xs tracking-widest uppercase text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label text-xs tracking-widest uppercase text-[#d4af37] mb-8">Newsletter</h4>
+<div class="relative group">
+<input class="w-full bg-transparent border-0 border-b border-[#d4af37]/20 py-2 px-0 text-xs text-[#F9F6EE] focus:ring-0 focus:border-[#f2ca50] transition-colors font-label uppercase tracking-widest" placeholder="Your Email" type="email"/>
+<button class="absolute right-0 top-0 text-[#f2ca50]">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<p class="mt-8 font-label text-[10px] tracking-widest uppercase text-[#F9F6EE]/20">© 2024 AabhushanAI. All Rights Reserved.</p>
+</div>
+</footer>
+</body></html>

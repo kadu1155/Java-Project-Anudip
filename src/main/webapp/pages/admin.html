@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AabhushanAI | Management Suite Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e2e2e2",
+                        "surface-container": "#1f1f1f",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#c6e9e9",
+                        "tertiary-fixed-dim": "#c9c6bf",
+                        "secondary-container": "#2e4e4e",
+                        "on-primary-fixed": "#241a00",
+                        "secondary": "#abcdcd",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "on-tertiary-fixed-variant": "#474741",
+                        "on-error": "#690005",
+                        "primary": "#f2ca50",
+                        "surface-container-highest": "#353535",
+                        "inverse-primary": "#735c00",
+                        "primary-container": "#d4af37",
+                        "on-secondary-container": "#9dbfbe",
+                        "on-background": "#e2e2e2",
+                        "on-tertiary-fixed": "#1c1c17",
+                        "on-secondary-fixed": "#002020",
+                        "on-primary-container": "#554300",
+                        "primary-fixed-dim": "#e9c349",
+                        "outline-variant": "#4d4635",
+                        "tertiary": "#d1cec7",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#131313",
+                        "on-secondary": "#143535",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#31312b",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary-fixed-variant": "#574500",
+                        "inverse-on-surface": "#303030",
+                        "surface-variant": "#353535",
+                        "on-tertiary-container": "#464540",
+                        "outline": "#99907c",
+                        "tertiary-container": "#b5b3ac",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#e9c349",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-surface-variant": "#d0c5af",
+                        "primary-fixed": "#ffe088",
+                        "on-primary": "#3c2f00",
+                        "secondary-fixed-dim": "#abcdcd",
+                        "on-secondary-fixed-variant": "#2c4c4c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-glow {
+            box-shadow: 0 0 40px -10px rgba(242, 202, 80, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body antialiased min-h-screen flex flex-col overflow-hidden">
+<!-- Background Art (Asymmetric Branding) -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute top-[-10%] right-[-5%] w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent blur-3xl opacity-30"></div>
+<div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-primary-container/10 rounded-full blur-[120px] opacity-20"></div>
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')] opacity-20"></div>
+</div>
+<!-- Main Content -->
+<main class="relative z-10 flex-grow flex items-center justify-center p-6 lg:p-12">
+<div class="max-w-6xl w-full grid lg:grid-cols-2 gap-0 overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/15 shadow-[0_40px_80px_rgba(0,0,0,0.6)]">
+<!-- Left Side: Editorial Branding -->
+<div class="hidden lg:flex flex-col justify-between p-16 bg-surface-container-low relative">
+<div class="relative z-10">
+<h1 class="font-headline text-5xl text-primary tracking-widest leading-tight">
+                        AabhushanAI
+                    </h1>
+<div class="w-12 h-[2px] bg-primary-container my-8"></div>
+<p class="font-headline text-2xl text-on-surface-variant max-w-md italic leading-relaxed opacity-80">
+                        "Precision in craftsmanship, intelligence in management."
+                    </p>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-2">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label text-xs uppercase tracking-[0.2em] text-primary-container font-semibold">Authorized Personnel Only</span>
+</div>
+<p class="font-label text-xs uppercase tracking-[0.1em] text-on-surface/40">
+                        Secure Gateway to the Management Suite
+                    </p>
+</div>
+<!-- Abstract Imagery for Editorial Feel -->
+<div class="absolute inset-0 z-0 opacity-10">
+<img class="w-full h-full object-cover grayscale" data-alt="Close-up of golden liquid ripples with high contrast lighting and metallic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEaEJbCcXSV8O17QSMVx277i4k85cMyuM1wbuklrNzzIHrHsGhPecLekO2ZaVQMRc3zTpWJxuxGe1E5kPOtDrdgi_Ou3oQxw11AOs5PhgxrVWnw8PNnNKm9p92lb_elNPwF22H8dsI6eDwV8s-PGGBdpw18j9Js33GM-o7BbKwMX2RwvonuOURXOn6NJeO8CvpckbdDqQrvKZi1PmP3idK_Z2PK2MgB2Dsj9Rr2yDqrgAGb5mf0uLAuAwH9WvP7wutTti6YaHKCVkQ"/>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="p-8 md:p-16 flex flex-col justify-center bg-surface-container-lowest">
+<div class="mb-12 block lg:hidden">
+<h2 class="font-headline text-3xl text-primary tracking-widest text-center">AabhushanAI</h2>
+</div>
+            <div id="loginSection">
+                <header class="mb-10">
+                    <h2 class="font-headline text-3xl text-on-surface mb-2">Atelier Admin</h2>
+                    <p class="text-on-surface-variant font-label text-sm tracking-wide">Enter your credentials to access the Management Suite.</p>
+                </header>
+                <form id="adminLoginForm" class="space-y-8">
+                    <div class="relative group">
+                        <label class="block text-xs uppercase tracking-widest text-primary-container font-bold mb-2">Identifier</label>
+                        <div class="flex items-center">
+                            <span class="material-symbols-outlined absolute left-0 text-on-surface/30 group-focus-within:text-primary transition-colors duration-300">person</span>
+                            <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 pl-8 py-3 text-on-surface focus:ring-0 focus:border-primary transition-all duration-500 placeholder:text-on-surface/10 font-label tracking-wide" id="email" name="email" placeholder="admin@aabhushan.ai" required="" type="email"/>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <div class="flex justify-between items-end mb-2">
+                            <label class="block text-xs uppercase tracking-widest text-primary-container font-bold">Access Key</label>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-symbols-outlined absolute left-0 text-on-surface/30 group-focus-within:text-primary transition-colors duration-300">lock</span>
+                            <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 pl-8 py-3 text-on-surface focus:ring-0 focus:border-primary transition-all duration-500 placeholder:text-on-surface/10 font-label tracking-wide" id="password" name="password" placeholder="••••••••••••" required="" type="password"/>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-label font-extrabold uppercase tracking-[0.25em] py-5 rounded-lg gold-glow hover:brightness-110 active:scale-[0.98] transition-all duration-500 ease-out flex items-center justify-center gap-3" type="submit">
+                            Initialize Access
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Dashboard Section (Initially Hidden) -->
+            <div id="dashboardSection" class="hidden space-y-8 h-[600px] overflow-y-auto custom-scrollbar pr-4">
+                <header class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="font-headline text-3xl text-on-surface">Product Atelier</h2>
+                        <p class="text-on-surface-variant font-label text-xs tracking-widest uppercase">Catalog Management</p>
+                    </div>
+                    <button onclick="showProductModal()" class="px-6 py-3 bg-primary text-on-primary text-[10px] font-bold uppercase tracking-widest rounded hover:brightness-110 transition-all flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">add</span>
+                        New Masterpiece
+                    </button>
+                </header>
+
+                <div class="grid grid-cols-1 gap-4" id="adminProductList">
+                    <!-- Products will be listed here -->
+                </div>
+            </div>
+
+            <script src="../js/app.js"></script>
+            <script>
+                const loginSection = document.getElementById('loginSection');
+                const dashboardSection = document.getElementById('dashboardSection');
+                const adminLoginForm = document.getElementById('adminLoginForm');
+                const adminProductList = document.getElementById('adminProductList');
+
+                adminLoginForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const email = document.getElementById('email').value;
+                    const password = document.getElementById('password').value;
+                    
+                    try {
+                        const res = await API.login(email, password);
+                        if (res.success && res.user.role === 'ADMIN') {
+                            showDashboard();
+                        } else {
+                            UI.showToast('Invalid admin credentials', 'error');
+                        }
+                    } catch (err) {
+                        UI.showToast(err.message, 'error');
+                    }
+                });
+
+                async function showDashboard() {
+                    loginSection.classList.add('hidden');
+                    dashboardSection.classList.remove('hidden');
+                    loadAdminProducts();
+                }
+
+                async function loadAdminProducts() {
+                    adminProductList.innerHTML = '<p class="text-center opacity-50 italic">Retrieving catalog...</p>';
+                    try {
+                        const products = await API.getProducts();
+                        adminProductList.innerHTML = '';
+                        products.forEach(p => {
+                            const item = document.createElement('div');
+                            item.className = 'flex items-center gap-4 p-4 bg-surface-container-high border border-outline-variant/10 rounded-lg group';
+                            item.innerHTML = `
+                                <img src="${p.image_url}" class="w-16 h-16 object-cover rounded grayscale group-hover:grayscale-0 transition-all" />
+                                <div class="flex-1">
+                                    <h4 class="font-headline text-lg">${p.name}</h4>
+                                    <p class="text-[10px] uppercase tracking-widest opacity-50">${p.category} • ₹${p.price.toLocaleString()}</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <button onclick="editProduct(${p.id})" class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined">edit</span></button>
+                                    <button onclick="deleteProduct(${p.id})" class="p-2 text-on-surface-variant hover:text-error transition-colors"><span class="material-symbols-outlined">delete</span></button>
+                                </div>
+                            `;
+                            adminProductList.appendChild(item);
+                        });
+                    } catch (err) {
+                        adminProductList.innerHTML = '<p class="text-center text-error">Failed to load catalog</p>';
+                    }
+                }
+
+                async function deleteProduct(id) {
+                    if (confirm('Are you sure you want to remove this piece from the atelier?')) {
+                        try {
+                            const res = await API.adminDeleteProduct(id);
+                            UI.showToast(res.message);
+                            loadAdminProducts();
+                        } catch (err) {
+                            UI.showToast(err.message, 'error');
+                        }
+                    }
+                }
+
+                function showProductModal(product = null) {
+                    const name = prompt('Name:', product ? product.name : '');
+                    const price = prompt('Price:', product ? product.price : '');
+                    const category = prompt('Category:', product ? product.category : '');
+                    const description = prompt('Description:', product ? product.description : '');
+                    const imageUrl = prompt('Image URL:', product ? product.image_url : '');
+                    const stock = prompt('Stock:', product ? product.stock : '10');
+
+                    if (name && price) {
+                        const data = {
+                            name, 
+                            price: parseFloat(price), 
+                            category, 
+                            description, 
+                            image_url: imageUrl,
+                            stock: parseInt(stock),
+                            mood: 'Modern', // Default
+                            occasion: 'Daily', // Default
+                            personality: 'Elegant' // Default
+                        };
+
+                        if (product) {
+                            data.id = product.id;
+                            API.adminUpdateProduct(data).then(res => {
+                                UI.showToast(res.message);
+                                loadAdminProducts();
+                            });
+                        } else {
+                            API.adminAddProduct(data).then(res => {
+                                UI.showToast(res.message);
+                                loadAdminProducts();
+                            });
+                        }
+                    }
+                }
+
+                async function editProduct(id) {
+                    try {
+                        const product = await API.getProduct(id);
+                        showProductModal(product);
+                    } catch (err) {
+                        UI.showToast(err.message, 'error');
+                    }
+                }
+
+                // Initial check
+                document.addEventListener('DOMContentLoaded', () => {
+                    API.checkSession().then(res => {
+                        if (res.loggedIn && res.user.role === 'ADMIN') {
+                            showDashboard();
+                        }
+                    });
+                });
+            </script>
+<footer class="mt-16 text-center lg:text-left">
+<p class="text-[10px] uppercase tracking-[0.2em] text-on-surface/30 leading-relaxed">
+                        Security Notice: All access attempts are logged and monitored under the Digital Atelier Protocol. Unauthorized access is strictly prohibited.
+                    </p>
+</footer>
+</div>
+</div>
+</main>
+<!-- Footer Branding (Minimalist) -->
+<footer class="relative z-10 w-full px-12 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label text-[10px] uppercase tracking-[0.3em] text-on-surface/20">
+            © 2024 AabhushanAI. The Digital Atelier.
+        </p>
+<div class="flex gap-8">
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface/20 hover:text-primary transition-colors" href="#">Infrastructure</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface/20 hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface/20 hover:text-primary transition-colors" href="#">Global Support</a>
+</div>
+</footer>
+</body></html>

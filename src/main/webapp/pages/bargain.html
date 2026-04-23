@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e2e2e2",
+                    "surface-container": "#1f1f1f",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#c6e9e9",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "secondary-container": "#2e4e4e",
+                    "on-primary-fixed": "#241a00",
+                    "secondary": "#abcdcd",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#474741",
+                    "on-error": "#690005",
+                    "primary": "#f2ca50",
+                    "surface-container-highest": "#353535",
+                    "inverse-primary": "#735c00",
+                    "primary-container": "#d4af37",
+                    "on-secondary-container": "#9dbfbe",
+                    "on-background": "#e2e2e2",
+                    "on-tertiary-fixed": "#1c1c17",
+                    "on-secondary-fixed": "#002020",
+                    "on-primary-container": "#554300",
+                    "primary-fixed-dim": "#e9c349",
+                    "outline-variant": "#4d4635",
+                    "tertiary": "#d1cec7",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#131313",
+                    "on-secondary": "#143535",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary": "#31312b",
+                    "surface-container-low": "#1b1b1b",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-on-surface": "#303030",
+                    "surface-variant": "#353535",
+                    "on-tertiary-container": "#464540",
+                    "outline": "#99907c",
+                    "tertiary-container": "#b5b3ac",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#e5e2db",
+                    "on-surface-variant": "#d0c5af",
+                    "primary-fixed": "#ffe088",
+                    "on-primary": "#3c2f00",
+                    "secondary-fixed-dim": "#abcdcd",
+                    "on-secondary-fixed-variant": "#2c4c4c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-serif { font-family: 'Noto Serif', serif; }
+      .font-sans { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-sans selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#131313]/60 backdrop-blur-md text-[#f2ca50] font-['Noto_Serif'] tracking-[0.05rem] uppercase docked full-width z-50 shadow-[0_40px_40px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-serif text-[#f2ca50] tracking-widest">AabhushanAI</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#f2ca50] border-b border-[#d4af37]/30 pb-1 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Collections</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Bespoke</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Atelier</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Heritage</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-[#f2ca50] transition-all duration-400">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#f2ca50] transition-all duration-400">dark_mode</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#f2ca50] transition-all duration-400">shopping_bag</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-[#f2ca50] transition-all duration-400">person</span>
+</div>
+</nav>
+<main class="pt-32 pb-24 min-h-screen px-4 md:px-12 max-w-7xl mx-auto">
+<!-- Bargain Header -->
+<header class="mb-16 text-center md:text-left">
+<p class="font-label text-primary-container tracking-[0.2em] uppercase text-xs mb-4">Private Acquisition</p>
+<h1 class="font-headline text-5xl md:text-7xl text-on-surface font-bold leading-tight mb-6">The Digital <span class="text-primary italic">Atelier</span> Negotiation</h1>
+<p class="text-on-surface-variant max-w-2xl font-light leading-relaxed">Enter the vault. Propose your valuation for our masterwork. Our AI concierge, trained in the heritage of fine jewelry, will review your offer in real-time.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Column: Product Showcase -->
+<div class="lg:col-span-5 space-y-8">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg bg-surface-container-low group">
+<img alt="The Emerald Heritage Necklace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up of a high-end emerald and diamond necklace on a dark velvet stand with dramatic pinpoint lighting highlighting the facets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD45lx-BYfd34AJJaDnLSZI8AcDWm95xkFubv161xwssjIk2R2Z-ONJse0aPMZaMoSMnFYcPTquv2d6_kT_CZTQC7eKVNQeBdqHG9RFjvI1HF7UFkG28RkCMePyKeoboUTSxN-tpN8h4zA55bcZZdlOOIxCPACYag7eyO2GQcoVZSnG6LdzbWY79YcqjPFGqoioHkwf8iuKDFTh4uJQUyRL7k94KNqkEdXGNNsUci6XoHewH_2kh9pYJ85jawNICJdHZ0BzrFIGBwYv"/>
+<div class="absolute top-6 right-6">
+<div class="w-12 h-12 rounded-full bg-surface/40 backdrop-blur-xl flex items-center justify-center text-primary border border-primary/10">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-lg border border-outline-variant/10">
+<h2 class="font-headline text-2xl text-on-surface mb-2">The Emerald Heritage</h2>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-6">Serial No. AU-8829-X</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-xs text-on-surface-variant uppercase mb-1">Market Valuation</p>
+<p class="text-3xl font-headline text-primary">$42,500.00</p>
+</div>
+<div class="text-right">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-tighter uppercase">Available for Offer</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Bargaining -->
+<div class="lg:col-span-7 flex flex-col h-full space-y-6">
+<!-- AI Chat Interface -->
+<div class="flex-grow bg-surface-container-low rounded-lg border border-outline-variant/10 flex flex-col overflow-hidden min-h-[500px]">
+<div class="p-6 border-b border-outline-variant/10 flex items-center justify-between bg-surface-container">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">smart_toy</span>
+</div>
+<div>
+<p class="font-bold text-sm text-on-surface">Atelier Concierge</p>
+<p class="text-[10px] text-primary flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Active Negotiation</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">info</span>
+</div>
+<!-- Chat Messages -->
+<div class="flex-grow p-8 space-y-6 overflow-y-auto">
+<!-- Bot Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="flex-grow bg-surface-container-high p-5 rounded-r-2xl rounded-bl-2xl">
+<p class="text-sm leading-relaxed text-on-surface">Welcome to the private vault. This piece is a masterwork from our 1924 Heritage Collection. I am authorized to discuss a fair valuation with you. What would be your opening offer?</p>
+<p class="text-[10px] text-on-surface-variant mt-2 font-mono">10:42 AM</p>
+</div>
+</div>
+<!-- User Message (Hypothetical) -->
+<div class="flex gap-4 max-w-[85%] ml-auto flex-row-reverse">
+<div class="flex-grow bg-primary/10 border border-primary/20 p-5 rounded-l-2xl rounded-br-2xl">
+<p class="text-sm leading-relaxed text-primary">I'd like to offer $38,000 for this piece. It would be a centerpiece in my private collection.</p>
+<p class="text-[10px] text-primary-container/60 mt-2 font-mono text-right">10:44 AM</p>
+</div>
+</div>
+<!-- Bot Response (Accepted/Countered) -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="flex-grow bg-surface-container-high p-5 rounded-r-2xl rounded-bl-2xl">
+<div class="flex items-center gap-2 text-primary-container mb-3">
+<span class="material-symbols-outlined text-sm">balance</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Counter-Offer Received</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface">Your appreciation for the craftsmanship is noted. However, given the rarity of the Zambian emeralds, $38,000 is below our current floor. I can offer a final studio price of <span class="text-primary font-bold">$40,250</span>.</p>
+<p class="text-[10px] text-on-surface-variant mt-2 font-mono">10:45 AM</p>
+</div>
+</div>
+</div>
+<!-- Input Area -->
+<div class="p-6 bg-surface-container-highest/30 backdrop-blur-md border-t border-outline-variant/10">
+<div class="grid grid-cols-2 gap-4 mb-4">
+<div class="space-y-1">
+<label class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest px-1">Your Valuation</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary font-bold">$</span>
+<input class="w-full bg-surface border-none border-b border-outline-variant focus:ring-0 focus:border-primary py-3 pl-8 text-on-surface text-lg font-headline transition-all" placeholder="40250" type="number"/>
+</div>
+</div>
+<div class="flex items-end">
+<button class="w-full h-[52px] bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-sm tracking-widest uppercase rounded-md hover:brightness-110 transition-all duration-400 shadow-lg shadow-primary/10">
+                                    Send Offer
+                                </button>
+</div>
+</div>
+<div class="flex items-center justify-center gap-8">
+<button class="text-[10px] text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">history</span> Last 5 Sales
+                            </button>
+<button class="text-[10px] text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm">cancel</span> Retract
+                            </button>
+</div>
+</div>
+</div>
+<!-- Guarantees Bento -->
+<div class="grid grid-cols-3 gap-4">
+<div class="p-4 bg-surface-container rounded-lg flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">verified</span>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Authenticity</p>
+</div>
+<div class="p-4 bg-surface-container rounded-lg flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">shield</span>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">Secure Escrow</p>
+</div>
+<div class="p-4 bg-surface-container rounded-lg flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2">local_shipping</span>
+<p class="text-[10px] font-bold text-on-surface-variant uppercase">White-Glove</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full h-screen w-64 border-r border-[#d4af37]/15 bg-[#1b1b1b] font-['Manrope'] tracking-wide text-sm z-40">
+<div class="p-8 mb-8">
+<h3 class="font-serif text-[#f2ca50] text-xl">Atelier Admin</h3>
+<p class="text-[10px] text-[#F9F6EE]/40 uppercase tracking-widest">Management Suite</p>
+</div>
+<nav class="flex-grow space-y-2 px-4">
+<div class="flex items-center gap-4 px-6 py-4 text-[#F9F6EE]/60 hover:bg-[#2a2a2a] hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </div>
+<div class="flex items-center gap-4 px-6 py-4 bg-gradient-to-r from-[#f2ca50] to-[#d4af37] text-[#131313] rounded-r-full font-bold cursor-pointer">
+<span class="material-symbols-outlined">diamond</span> Inventory
+            </div>
+<div class="flex items-center gap-4 px-6 py-4 text-[#F9F6EE]/60 hover:bg-[#2a2a2a] hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined">local_shipping</span> Orders
+            </div>
+<div class="flex items-center gap-4 px-6 py-4 text-[#F9F6EE]/60 hover:bg-[#2a2a2a] hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined">group</span> Customers
+            </div>
+<div class="flex items-center gap-4 px-6 py-4 text-[#F9F6EE]/60 hover:bg-[#2a2a2a] hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined">insights</span> Analytics
+            </div>
+<div class="flex items-center gap-4 px-6 py-4 text-[#F9F6EE]/60 hover:bg-[#2a2a2a] hover:translate-x-1 transition-transform duration-300 cursor-pointer">
+<span class="material-symbols-outlined">settings</span> Settings
+            </div>
+</nav>
+<div class="p-6 border-t border-[#d4af37]/10">
+<button class="w-full py-3 bg-[#d4af37]/10 border border-[#d4af37]/20 text-[#f2ca50] text-xs font-bold uppercase tracking-widest hover:bg-[#d4af37]/20 transition-colors">Generate Report</button>
+</div>
+</aside>
+<!-- Footer -->
+<footer class="w-full px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 bg-[#131313] border-t border-[#d4af37]/10 font-['Manrope'] text-xs tracking-widest uppercase">
+<div class="col-span-1 md:col-span-1">
+<div class="text-xl font-serif text-[#f2ca50] mb-6">AabhushanAI</div>
+<p class="text-[#F9F6EE]/40 normal-case tracking-normal mb-8 leading-relaxed max-w-xs">A synthesis of ancient heritage and computational precision. Defining the future of digital luxury.</p>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6 font-bold">The Craftsmanship</h4>
+<ul class="space-y-4">
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Our Atelier</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Ethical Sourcing</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">AI Design Lab</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6 font-bold">Client Care</h4>
+<ul class="space-y-4">
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Shipping &amp; Returns</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Contact Us</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Bespoke Inquiries</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6 font-bold">Newsletter</h4>
+<div class="relative mt-2">
+<input class="w-full bg-transparent border-none border-b border-[#d4af37]/20 text-[10px] py-2 focus:ring-0 focus:border-[#f2ca50] text-[#F9F6EE] placeholder:text-[#F9F6EE]/20" placeholder="ENTER YOUR EMAIL" type="email"/>
+<button class="absolute right-0 bottom-2 text-[#f2ca50] hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<p class="mt-12 text-[#F9F6EE]/40 text-[9px] tracking-[0.2em]">© 2024 AabhushanAI. The Digital Atelier.</p>
+</div>
+</footer>
+</body></html>

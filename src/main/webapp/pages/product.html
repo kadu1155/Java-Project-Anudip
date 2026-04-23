@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e2e2e2",
+                    "surface-container": "#1f1f1f",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#c6e9e9",
+                    "tertiary-fixed-dim": "#c9c6bf",
+                    "secondary-container": "#2e4e4e",
+                    "on-primary-fixed": "#241a00",
+                    "secondary": "#abcdcd",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#474741",
+                    "on-error": "#690005",
+                    "primary": "#f2ca50",
+                    "surface-container-highest": "#353535",
+                    "inverse-primary": "#735c00",
+                    "primary-container": "#d4af37",
+                    "on-secondary-container": "#9dbfbe",
+                    "on-background": "#e2e2e2",
+                    "on-tertiary-fixed": "#1c1c17",
+                    "on-secondary-fixed": "#002020",
+                    "on-primary-container": "#554300",
+                    "primary-fixed-dim": "#e9c349",
+                    "outline-variant": "#4d4635",
+                    "tertiary": "#d1cec7",
+                    "surface-bright": "#393939",
+                    "inverse-surface": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#131313",
+                    "on-secondary": "#143535",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary": "#31312b",
+                    "surface-container-low": "#1b1b1b",
+                    "on-primary-fixed-variant": "#574500",
+                    "inverse-on-surface": "#303030",
+                    "surface-variant": "#353535",
+                    "on-tertiary-container": "#464540",
+                    "outline": "#99907c",
+                    "tertiary-container": "#b5b3ac",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#e9c349",
+                    "tertiary-fixed": "#e5e2db",
+                    "on-surface-variant": "#d0c5af",
+                    "primary-fixed": "#ffe088",
+                    "on-primary": "#3c2f00",
+                    "secondary-fixed-dim": "#abcdcd",
+                    "on-secondary-fixed-variant": "#2c4c4c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .font-serif { font-family: 'Noto Serif', serif; }
+      .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-manrope selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full flex justify-between items-center px-8 py-4 bg-[#131313]/60 backdrop-blur-md text-[#f2ca50] font-['Noto_Serif'] tracking-[0.05rem] uppercase docked full-width z-50 shadow-[0_40px_40px_rgba(0,0,0,0.4)]">
+<div class="text-2xl font-serif text-[#f2ca50] tracking-widest">AabhushanAI</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Collections</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Bespoke</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Atelier</a>
+<a class="text-[#F9F6EE]/70 hover:text-[#f2ca50] transition-all duration-400 ease-in-out" href="#">Heritage</a>
+</nav>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined hover:text-[#f2ca50] cursor-pointer transition-colors duration-400">language</span>
+<span class="material-symbols-outlined hover:text-[#f2ca50] cursor-pointer transition-colors duration-400">dark_mode</span>
+<span class="material-symbols-outlined hover:text-[#f2ca50] cursor-pointer transition-colors duration-400">shopping_bag</span>
+<span class="material-symbols-outlined hover:text-[#f2ca50] cursor-pointer transition-colors duration-400">person</span>
+</div>
+</header>
+<main class="pt-24 pb-16 px-6 md:px-12 lg:px-24 max-w-screen-2xl mx-auto">
+<!-- Breadcrumbs -->
+<nav class="mb-12 flex gap-3 text-xs tracking-widest uppercase text-on-surface-variant opacity-60">
+<a class="hover:text-primary transition-colors" href="#">Collections</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Fine Jewelry</a>
+<span>/</span>
+<span id="breadcrumbName" class="text-primary">Celestial Solitaire Necklace</span>
+</nav>
+<!-- Product Gallery & Core Info Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Left: Asymmetric Gallery -->
+<div class="lg:col-span-7 grid grid-cols-2 gap-4">
+<div class="col-span-2 aspect-[4/5] overflow-hidden bg-surface-container-low rounded-lg group relative cursor-zoom-in">
+<img id="productMainImg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Exquisite close-up of a diamond solitaire necklace on a dark velvet stand with cinematic spotlighting and golden reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuGUdnw774zeM7KjKU6A-dBKKYK0bW48IsUbt6lmFle3FdSumyNGGAWGuCLGDvTtO3vcP_18azNisifIZDITNLk00mB6UzhrC08ARHxgOw1on53qaWUzLGmtaA_iNGDQhTy7Nz1YKKp2bn7Y6BPV19eJfQ2FXRxMHzxSy9HUWpIbOb7Un9QY5T5hebMmGrLZARQZMf8Wu1EMbVgSuc2RoPV3PJ7i5HN5FuaXaFXoPvlxV9Px0ngz0XSFQIJG6Jrv4L4m4CunFzkhmx"/>
+<div class="absolute top-4 right-4 bg-surface/40 backdrop-blur-md p-3 rounded-full flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Macro detail of diamond facets and gold setting of a luxury necklace against deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBS0lovu96Bn8dh09qeU536cArjegb5QyCN-b4ex4Ey7apL_xOMpmx-HJjnUM7ypFDIxOGtFvfi_uPmDn36HrIVWjZfjtmcydDn0jzKsEGizWvUR-ehzYCdCvQfPEKi50d2q79wpjuzcTjedIi2Kn-Goj6pAk7eYSYoB3FHIpg-LPCLT2enO1H0QE-SlJRyFAeIAmwAVvSwwjBpPQD8qHDlHROdwCo_nATrTVk7GE5CchbviiI9bMcqFisk4JryQn8bmMCzz0CFLH2"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden translate-y-8">
+<img class="w-full h-full object-cover" data-alt="Lifestyle shot of a woman wearing a minimalist gold necklace during a formal evening event in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkQ6UVdr6zDPZ4Cwq6pOm2t4BFLFXQYHZdAlR5GRvX-MnLKVkRT9xY3FS4x0MWcTmCpHnOIZZmJDSQgF7k1Ap5-857tc1U2ksJLiGg_82zu_tACwcnHLTsHKO6veOaS2xaIc2K1FrJzWqj8m6xheB-Y2rTg5cfxa8R8T_HTDL5VFS2wxxVE284H5TrVUSIlLqAFeziDF5tctyLIQo6Z7L5So6DKRadNfP3eI0Nvj4PQ0EXyRe_rx8Oqcn6CrbRZfQrzzPHfkQ23tt"/>
+</div>
+</div>
+<!-- Right: Information & Actions -->
+<div class="lg:col-span-5 flex flex-col justify-start">
+<div class="mb-2">
+<span class="text-xs font-label tracking-[0.2em] text-primary uppercase">Atelier Signature</span>
+</div>
+<h1 id="productName" class="text-4xl md:text-5xl lg:text-6xl font-headline mb-6 leading-tight">Celestial Solitaire Necklace</h1>
+<div class="flex items-end gap-4 mb-8">
+<span id="productPrice" class="text-3xl font-manrope text-on-surface">₹ 2,45,000</span>
+<span id="productSku" class="text-on-surface-variant text-sm mb-1 opacity-50 uppercase tracking-widest">SKU: AB-CEL-001</span>
+</div>
+<div class="space-y-8 mb-10">
+<div>
+<h3 class="text-xs tracking-widest uppercase text-on-surface-variant mb-3 font-bold">The Narrative</h3>
+<p id="productDesc" class="text-on-surface/80 leading-relaxed font-light text-lg italic">
+                            Inspired by the alignment of the stars, this piece features a brilliant-cut 1.5 carat diamond suspended in a hand-crafted 18k antique gold orbit. A symbol of eternal elegance and celestial wonder.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-6 p-6 bg-surface-container-low rounded-lg border border-outline-variant/15">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Material</span>
+<span id="specCategory" class="text-sm font-medium">18k Yellow Gold</span>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-on-surface-variant mb-1">Stone</span>
+<span class="text-sm font-medium">Lab-Grown Diamond (VVS1)</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest">Formal Gala</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest">Evening Soirée</span>
+<span class="px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-widest">Anniversary</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 mb-2">
+<span class="text-xs tracking-widest uppercase">Quantity</span>
+<div class="flex items-center bg-surface-container rounded border border-outline-variant/30">
+<button onclick="updateQuantity(-1)" class="px-3 py-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span id="quantityDisplay" class="px-4 font-manrope text-sm">01</span>
+<button onclick="updateQuantity(1)" class="px-3 py-2 hover:text-primary transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="flex gap-4">
+<button onclick="handleAddToCart()" class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary py-5 rounded-md font-bold uppercase tracking-widest text-sm hover:brightness-110 transition-all duration-400 shadow-lg shadow-primary/10">
+                            Add to Cart
+                        </button>
+<button class="aspect-square w-16 flex items-center justify-center border border-primary/30 text-primary rounded-md hover:bg-primary/5 transition-colors group">
+<span class="material-symbols-outlined transition-transform duration-300 group-hover:scale-110">favorite</span>
+</button>
+</div>
+<button onclick="handleSaveToLocker()" class="flex items-center justify-center gap-2 py-4 border border-outline-variant/30 rounded-md text-xs uppercase tracking-[0.2em] hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-lg">door_sliding</span>
+                        Save to Private Locker
+                    </button>
+</div>
+</div>
+</section>
+<!-- Detailed Specifications & Reviews -->
+<section class="mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 border-t border-outline-variant/10 pt-16">
+<div>
+<h2 class="text-3xl font-headline mb-8">Artisan Details</h2>
+<div class="space-y-6">
+<div class="flex justify-between pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Total Carat Weight</span>
+<span class="font-medium">1.52 cts</span>
+</div>
+<div class="flex justify-between pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Gold Weight</span>
+<span class="font-medium">4.20 gms</span>
+</div>
+<div class="flex justify-between pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Chain Length</span>
+<span class="font-medium">16 inches (adjustable)</span>
+</div>
+<div class="flex justify-between pb-4 border-b border-outline-variant/10">
+<span class="text-on-surface-variant uppercase text-xs tracking-widest">Clasp Type</span>
+<span class="font-medium">Lobster Claw</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-end mb-8">
+<h2 class="text-3xl font-headline">Client Reviews</h2>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-on-surface text-sm ml-2 font-bold">4.8/5</span>
+</div>
+</div>
+<div class="space-y-8">
+<div class="p-6 bg-surface-container-lowest rounded-lg">
+<div class="flex justify-between mb-3">
+<span class="font-bold tracking-wide">Meera S.</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Verified Acquisition</span>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                            "The craftsmanship is beyond words. The way the light hits the solitaire makes it feel like it's truly glowing. Packaging was also exquisite."
+                        </p>
+</div>
+<div class="p-6 bg-surface-container-lowest rounded-lg">
+<div class="flex justify-between mb-3">
+<span class="font-bold tracking-wide">Vikram R.</span>
+<span class="text-[10px] text-on-surface-variant uppercase">Verified Acquisition</span>
+</div>
+<p class="text-sm text-on-surface-variant italic leading-relaxed">
+                            "A magnificent gift for my wife's 10th anniversary. The AI customization tool helped us visualize the perfect length. Exceptional service."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products Section -->
+<section class="mt-32">
+<h2 class="text-4xl font-headline mb-12 text-center">Curated Pairings</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Related 1 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-low mb-6 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Dainty gold ring with small diamonds on a textured dark pedestal with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA6y4JgKmjt-3N0JLEO6haJsNFXVc1DsFfvlmcbJ8XQzxEAYQMmBZfAcCmk5iG-ANuaMo4c0pKXdHpHmkuI0_GpU-YH374F826S_f0vO6zEq6XKMLmRI13TQqX7j5gS3g5CVvDsLvtQ9Cnxfbk90SsguzKEMreKeVAencSTYoyBYBlp46c6h2V7lYXAeuEmt9WOMs-fgDjwif9VuSd2tk4T19QoFWQ2LaWxHUoBPAG_w1SRxHoxqTUBA_FBManngPbErk9Tmfgo3zg"/>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/60 backdrop-blur-md flex items-center justify-center text-primary border border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+</div>
+<h3 class="text-sm tracking-widest uppercase font-bold mb-2">Astral Band Ring</h3>
+<p class="text-primary text-sm tracking-widest">₹ 85,000</p>
+</div>
+<!-- Related 2 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-low mb-6 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Pair of elegant diamond drop earrings on a charcoal background with warm golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdOuut-m-TBqsFivjZedwqwRD0Oittldyfgaqt4H_4aPUZUzsX70Ol9w0ul9HXnhWSyqml1w2AWwPa9AK17E0eFcHMvafK_xYCxfoTz0yFm7ech3gyILXnQn7w_SyaCzO8cO_k89DoqLHRutM-BLV6Goh_mRkDDYyy3y6Ecb7-ZjFg1GMIfpvTVQ2Dy4Jl8siTuYaDme92toRMrmLw3jBBRncmY2Lc_oJM68CoaXBdr9i027Q70k30jlqFnBnBO8dSWC8Liige2Vxl"/>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/60 backdrop-blur-md flex items-center justify-center text-primary border border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+</div>
+<h3 class="text-sm tracking-widest uppercase font-bold mb-2">Starlight Drop Earrings</h3>
+<p class="text-primary text-sm tracking-widest">₹ 1,55,000</p>
+</div>
+<!-- Related 3 -->
+<div class="group translate-y-4">
+<div class="aspect-[3/4] bg-surface-container-low mb-6 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern geometric gold bracelet lying on a dark stone surface with soft ambient glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeUt9NXhTLg3hF71RmBPuWzcnvmpxFeiWXiv1lSGFp0hbTzXn3WVjMr4lIWLkX9eDZ555R7euJt-fao9lWJkJkIDt6ZBR5KzBZvI-vFIXC_C07dXDEhPAyg2BQorVT_eTK3CX9qGU_r3gyovT3eEit3pLk5TW4xRSEt5fNvmYB2iBf1NKYYBcH40ffph83b76g_Zz7n8b2scCuSmj2vkeNQ_ehZNnhiWpO1jtZd1G0ekd43yz_SespoFwK562M5dzWxqG3RXcCC44l"/>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/60 backdrop-blur-md flex items-center justify-center text-primary border border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+</div>
+<h3 class="text-sm tracking-widest uppercase font-bold mb-2">Nova Cuff Bangle</h3>
+<p class="text-primary text-sm tracking-widest">₹ 2,10,000</p>
+</div>
+<!-- Related 4 -->
+<div class="group">
+<div class="aspect-[3/4] bg-surface-container-low mb-6 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Intricate diamond necklace with floral motifs displayed on a dark grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNgDP30LXJMTKBUNkrs0zOUc65McgY5ZfbvFEaI83lCUOVENW-CyBQ6-TBVGYYfE4EzLYFa4xu8ii33tsb1ss6QIB9NK7DH8Jqc4nTKb6TDLIyf0uF4SBeYCHVVjwiAtD22joDmfhdT_Bxlbc-7HJSxL8R8kmJBxCXiEnNidjdhObtJ9OkASBKzlNJ34KsTidAhmD0CvCmlDvgR_Kq_llvWbGMHBvv6I2TZ3dqAlDZTXuhd7e7HI25t_KMwUuzzGLkCbFAwcQKavHT"/>
+<button class="absolute top-4 right-4 w-10 h-10 rounded-full bg-surface/60 backdrop-blur-md flex items-center justify-center text-primary border border-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lock</span>
+</button>
+</div>
+<h3 class="text-sm tracking-widest uppercase font-bold mb-2">Heritage Bloom Choker</h3>
+<p class="text-primary text-sm tracking-widest">₹ 4,75,000</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#d4af37]/10 bg-[#131313] px-12 py-16 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Manrope'] text-xs tracking-widest uppercase">
+<div class="space-y-6">
+<div class="text-xl font-serif text-[#f2ca50]">AabhushanAI</div>
+<p class="text-[#F9F6EE]/40 normal-case leading-relaxed">Pioneering the intersection of ancient artistry and intelligent design. Our pieces are crafted for those who define luxury on their own terms.</p>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6">Collections</h4>
+<ul class="space-y-4">
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">The Craftsmanship</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Celestial Series</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Atelier Exclusives</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6">Legal &amp; Care</h4>
+<ul class="space-y-4">
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Privacy Policy</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Terms of Service</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#f2ca50] mb-6">Contact</h4>
+<ul class="space-y-4">
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Contact Us</a></li>
+<li><a class="text-[#F9F6EE]/40 hover:text-[#F9F6EE] transition-colors duration-400" href="#">Atelier Locations</a></li>
+<li class="flex gap-4 pt-4">
+<span class="material-symbols-outlined text-[#F9F6EE]/40 cursor-pointer hover:text-primary">share</span>
+<span class="material-symbols-outlined text-[#F9F6EE]/40 cursor-pointer hover:text-primary">mail</span>
+</li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 pt-12 border-t border-outline-variant/10 text-center opacity-40">
+            © 2024 AabhushanAI. THE DIGITAL ATELIER.
+        </div>
+</footer>
+    <script src="../js/app.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        let currentProduct = null;
+        let quantity = 1;
+
+        async function init() {
+            if (!productId) {
+                window.location.href = 'shop.html';
+                return;
+            }
+
+            try {
+                currentProduct = await API.getProduct(productId);
+                renderProduct();
+            } catch (err) {
+                console.error(err);
+                UI.showToast('Masterpiece not found', 'error');
+            }
+        }
+
+        function renderProduct() {
+            if (!currentProduct) return;
+
+            document.title = `${currentProduct.name} | AabhushanAI`;
+            document.getElementById('productName').innerText = currentProduct.name;
+            document.getElementById('productPrice').innerText = `₹ ${currentProduct.price.toLocaleString()}`;
+            document.getElementById('productDesc').innerText = currentProduct.description;
+            document.getElementById('productMainImg').src = currentProduct.image_url;
+            document.getElementById('productSku').innerText = `SKU: AB-CEL-00${currentProduct.id}`;
+            document.getElementById('breadcrumbName').innerText = currentProduct.name;
+            document.getElementById('specCategory').innerText = currentProduct.category;
+        }
+
+        function updateQuantity(change) {
+            quantity = Math.max(1, quantity + change);
+            document.getElementById('quantityDisplay').innerText = quantity.toString().padStart(2, '0');
+        }
+
+        async function handleAddToCart() {
+            try {
+                const res = await API.addToCart(currentProduct.id, quantity);
+                UI.showToast(res.message);
+            } catch (err) {
+                if (err.message.includes('login')) {
+                    window.location.href = 'login.html';
+                }
+            }
+        }
+
+        async function handleSaveToLocker() {
+            const eventName = prompt('Scheduling an event for this piece? (e.g., Wedding, Anniversary)', 'Special Occasion');
+            if (!eventName) return;
+
+            try {
+                const res = await API.saveToLocker({
+                    productId: currentProduct.id,
+                    eventName,
+                    eventDate: new Date().toISOString().split('T')[0]
+                });
+                UI.showToast(res.message);
+            } catch (err) {
+                if (err.message.includes('login')) {
+                    window.location.href = 'login.html';
+                }
+            }
+        }
+
+        init();
+    </script>
+</body></html>
